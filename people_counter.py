@@ -388,7 +388,8 @@ def on_open(ws):
 
 def openConnection():
 	websocket.enableTrace(False)
-	ws = websocket.WebSocketApp("wss://gh9iy0a1dk.execute-api.ap-south-1.amazonaws.com/dev",
+	socketApi = ""  # Add the socket api here
+	ws = websocket.WebSocketApp(socketApi,
 		                      on_message = on_message,
 		                      on_error = on_error,
 		                      on_close = on_close)
